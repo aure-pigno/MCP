@@ -8,7 +8,7 @@ public class CT39V111 {
   /*
   public static void main(String[] args)
   {
-      int[] i = {100, -50, -50, 70, 80, -80, 200, -50}; 
+      int[] i = {100, -50, -50, 70, 80, -80, -200, 50}; 
       System.out.println(maxSum(i));
   }
   */
@@ -23,8 +23,7 @@ public class CT39V111 {
       int first_positif = 0;
       int negatif = 0;
       int second_positif = 0;
-      int max = 0;
-      int max_negatif = Integer.MIN_VALUE;
+      int max = Integer.MIN_VALUE;
       for(int i = 0; i<t.length; i++)
       {
           if(!isPositif(t[i]))
@@ -46,7 +45,7 @@ public class CT39V111 {
               {
                   negatif = negatif + t[i];
               }
-              max_negatif = max(max_negatif,negatif);
+              max = max(max,max(negatif,t[i]));
               previousIsPositif = false;
           }
           else if(negatif == 0)
@@ -61,11 +60,10 @@ public class CT39V111 {
               second_positif = second_positif + t[i];
               previousIsPositif = true;
           }  
-          max = max(first_positif,max(second_positif,max(max,first_positif + negatif + second_positif)));
-      }
-      if(!beenPositif)
-      {
-          return (long) max_negatif;
+          if(beenPositif)
+          {
+              max = max(first_positif,max(second_positif,max(max,first_positif + negatif + second_positif)));
+          }
       }
       return (long) max;
   }
