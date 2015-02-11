@@ -5,24 +5,18 @@
 //Maas Dylan
 //Pignolet Aurélien
 public class CT39V111 {
-  /*
-  public static void main(String[] args)
-  {
-      int[] i = {100, -50, -50, 70, 80, -80, -200, 50}; 
-      System.out.println(maxSum(i));
-  }
-  */
   // Le paramètre t n'est pas null. 
   // De plus, il représente un vecteur non vide de n entiers relatifs.
   
   // Cette méthode ne modifie pas les éléments du tableau t.
   // Elle renvoie la somme de la sous-sequence non vide maximum de t.
   public static long maxSum(int[] t) {
-      boolean previousIsPositif = true;
-      boolean beenPositif = false;
-      int first_positif = 0;
-      int negatif = 0;
-      int second_positif = 0;
+      boolean previousIsPositif = true; //Nombre precedent est positif
+      boolean beenPositif = false; //Boolean disant si un nombre positif a deja ete vu
+      int first_positif = 0; //Premiere faction positive
+      int negatif = 0; //Premiere faction negative
+      int second_positif = 0; //Seconde faction positive
+      //Notre programme est sensible aux changements de signes. 
       int max = Integer.MIN_VALUE;
       for(int i = 0; i<t.length; i++)
       {
@@ -85,10 +79,12 @@ public class CT39V111 {
   }
   //***********************************************************************************
   //Expliquez la notion de "programme correct"
-  // Un programme correct est un programme qui donne une solution correcte pour chaque entree.
+  // Un programme correct est un programme qui donne une solution attendue pour chaque entree.
   //***********************************************************************************
   //Expliquez comment vous avez développé ce programme
-  
+  // Premiere etape: Raisonner sur papier avec  beaucoup de cas possible et de reflechir a un algorithme en pseudo-code/oralement pour les resoudre.
+  // Deuxieme etape: Transcrire en java.
   //***********************************************************************************
   //Expliquez pourquoi vous pensez que votre méthode est correcte
+  // Car on a pas fonctionner par essai erreur, et que ca a fonctionne directement pour tous les cas tester.
 }

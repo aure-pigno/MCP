@@ -13,9 +13,10 @@ public class CT39V211 {
   // Elle renvoie la somme de la sous-sequence maximum de t.
   public static long maxSum(int[] t) {
       boolean previousIsPositif = true;
-      int first_positif = 0;
-      int negatif = 0;
-      int second_positif = 0;
+      int first_positif = 0; //Premiere faction positive
+      int negatif = 0; //Premiere faction negative
+      int second_positif = 0; //Seconde faction positive
+      //Notre programme est sensible aux changements de signes. 
       int max = 0;
       for(int i = 0; i<t.length; i++)
       {
@@ -71,9 +72,10 @@ public class CT39V211 {
       return m;  
   }
   
-  //***********************************************************************************
   //Expliquez comment vous avez développé ce programme
-  
+  // Premiere etape: Raisonner sur papier avec  beaucoup de cas possible et de reflechir a un algorithme en pseudo-code/oralement pour les resoudre.
+  // Deuxieme etape: Transcrire en java.
   //***********************************************************************************
   //Expliquez pourquoi vous pensez que votre méthode est correcte
+  // Car on a pas fonctionner par essai erreur, et que ca a fonctionne directement pour tous les cas tester.
 }
